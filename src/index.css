@@ -1,0 +1,165 @@
+:root {
+  --clr-accent-500: hsl(292, 16%, 49%);
+  --clr-accent-400: hsl(275, 100%, 97%);
+  --clr-accent-300: hsl(0, 0%, 100%);
+
+  --clr-primary-900: hsl(292, 42%, 14%);
+
+  --ff-primary: 'Work Sans', sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  /* 14px */
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  /* 18px */
+  --fs-500: 1.125rem;
+  /* 32px */
+  --fs-600: 2rem;
+  /* 56px */
+  --fs-700: 3.5rem;
+
+  /* desktop heading */
+  --fs-heading-desktop: var(--fs-500)
+
+  /* mobile heading */
+  --fs-heading-mobile: var(--fs-400)
+
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+/* Remove default margin */
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'] ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+html,
+body {
+  height: 100%;
+}
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  shape-margin: 1rem;
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* general styling */
+
+body {
+  font-family: var(--ff-primary);
+  color: var(--clr-primary-900);
+  background: var(--Light-Pink, #F8EEFF);
+}
+
+.card {
+  position: absolute;
+  transform: translate(50%, -50%);
+  outline: 2px solid red;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: var(--clr-accent-300);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.card.active {
+  background-color: #f0f0f0;
+  border: 2px solid red;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card__header h1 {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-900);
+}
+
+.card__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.card__title h3 {
+  color: var(--clr-accent-900);
+  font-weight: var(--fw-semi-bold);
+  margin-right: auto;
+}
+
+.card__content {
+  color: var(--Pale-Purple, #8B6990);
+  font-weight: var(--fw-regular);
+  /* width: 100%; */
+}
+
