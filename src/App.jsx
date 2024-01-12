@@ -3,7 +3,7 @@ import faqData from './data';
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <header>
         <svg
           xmlns="http://www.w3.org/2000/svg"

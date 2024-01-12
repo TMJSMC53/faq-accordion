@@ -2,14 +2,7 @@ import PropTypes from 'prop-types';
 
 const Card = ({ question, answer, isActive, onShow }) => {
   return (
-    <main
-      className={`card ${isActive ? 'active' : ''}`}
-      onClick={() => onShow(!isActive)}
-    >
-      <div className="card__header">
-        <img src="assets/images/icon-star.svg" alt="icon star" />
-        <h1>FAQs</h1>
-      </div>
+    <div className="line" onClick={() => onShow(!isActive)}>
       <div className="card__title">
         <h3>{question}</h3>
         <img
@@ -18,7 +11,7 @@ const Card = ({ question, answer, isActive, onShow }) => {
         />
       </div>
       {isActive && <p className="card__content">{answer}</p>}
-    </main>
+    </div>
   );
 };
 
